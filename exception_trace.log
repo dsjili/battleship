@@ -1,0 +1,230 @@
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              put @1                 valid_row:                   
+<00000000037C5608>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               make @2                                             
+<00000000037C55E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @1                                             
+<00000000037C55A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<00000000037C55A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+
+battleship: PANIC: caught signal #21 (Ctrl-Break) -- Giving up...
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              put @1                 valid_row:                   
+<00000000038B1648>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               random_char @5                                      
+<00000000038B15E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @2                                             
+<00000000038B15A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<00000000038B15A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              put @1                 valid_row:                   
+<000000000387A648>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               random_char @5                                      
+<000000000387A5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @2                                             
+<000000000387A5A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<000000000387A5A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              put @1                 valid_row:                   
+<000000000384D648>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               draw_ship @26                                       
+<000000000384D5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+BOARD               random_char @7                                      
+<000000000384D5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @3                                             
+<000000000384D5A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<000000000384D5A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+
+battleship: PANIC: caught signal #21 (Ctrl-Break) -- Giving up...
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              item @1                valid_row:                   
+<000000000387B648>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               check_two @4                                        
+<000000000387B5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+BOARD               random_char @6                                      
+<000000000387B5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @3                                             
+<000000000387B5A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<000000000387B5A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+
+battleship: PANIC: caught signal #21 (Ctrl-Break) -- Giving up...
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              item @2                valid_column:                
+<00000000037BB648>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               check_one @4                                        
+<00000000037BB5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+BOARD               random_char @6                                      
+<00000000037BB5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @3                                             
+<00000000037BB5A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<00000000037BB5A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              item @1                valid_row:                   
+<00000000037D7648>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               check_two @4                                        
+<00000000037D75E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+BOARD               random_char @6                                      
+<00000000037D75E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @3                                             
+<00000000037D75A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<00000000037D75A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+STRING_8            to_integer @1          is_integer:                  
+<0000000003882F78>  (From READABLE_STRING_GENERAL)
+                                           Precondition violated.        Fail
+-------------------------------------------------------------------------------
+INTERFACE           interact @14                                        
+<000000000387A5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+INTERFACE           make @5                                             
+<000000000387A5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @1                                             
+<000000000387A5A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<000000000387A5A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+
+battleship: PANIC: caught signal #21 (Ctrl-Break) -- Giving up...
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+STRING_8            item @3                valid_index:                 
+<0000000003997D98>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+INTERFACE           interact @6                                         
+<000000000398F5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+INTERFACE           make @5                                             
+<000000000398F5E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @1                                             
+<000000000398F5A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<000000000398F5A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+
+battleship: PANIC: caught signal #21 (Ctrl-Break) -- Giving up...
+
+battleship: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+ARRAY2              item @2                valid_column:                
+<0000000003A16888>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BOARD               attack @3                                           
+<0000000003A167B8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+INTERFACE           interact_multi @20                                  
+<0000000003A165E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+INTERFACE           make @21                                            
+<0000000003A165E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @1                                             
+<0000000003A165A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<0000000003A165A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
