@@ -109,7 +109,7 @@ feature
 			end
 		end
 
-		display_solution
+	display_solution
 		local
 			i, j: INTEGER
 		do
@@ -132,14 +132,12 @@ feature
 			end
 		end
 
-	new_ship
-		do
-		end
-
 	random_int: INTEGER
 		do
 			random_sequence.forth
 			Result := random_sequence.item
+		ensure
+			result_check: Result >= 0
 		end
 
 	random_char
@@ -164,6 +162,8 @@ feature
 		end
 
 	draw_ship (i: INTEGER)
+		require
+			min_max_ship_size: i >= 1 and i <= 5
 		local
 			value: INTEGER
 			j, k: INTEGER
@@ -230,6 +230,8 @@ feature
 		end
 
 	check_one (i: INTEGER): BOOLEAN
+		require
+			min_max_ship_size: i >= 1 and i <= 5
 		local
 			j: INTEGER
 		do
@@ -244,9 +246,13 @@ feature
 				end
 				j := j + 1
 			end
+		ensure
+			result_check: Result /= VOID
 		end
 
 	check_two (i: INTEGER): BOOLEAN
+		require
+			min_max_ship_size: i >= 1 and i <= 5
 		local
 			j: INTEGER
 		do
@@ -261,9 +267,13 @@ feature
 				end
 				j := j + 1
 			end
+		ensure
+			result_check: Result /= VOID
 		end
 
 	check_three (i: INTEGER): BOOLEAN
+		require
+			min_max_ship_size: i >= 1 and i <= 5
 		local
 			j: INTEGER
 		do
@@ -278,9 +288,13 @@ feature
 				end
 				j := j + 1
 			end
+		ensure
+			result_check: Result /= VOID
 		end
 
 	check_four (i: INTEGER): BOOLEAN
+		require
+			min_max_ship_size: i >= 1 and i <= 5
 		local
 			j: INTEGER
 		do
@@ -295,6 +309,8 @@ feature
 				end
 				j := j + 1
 			end
+		ensure
+			result_check: Result /= VOID
 		end
 
 	attack (c1: INTEGER; c2: CHARACTER): STRING
@@ -314,9 +330,13 @@ feature
 			else
 				Result := "Invalid cell!"
 			end
+		ensure
+			result_check: Result /= VOID
 		end
 
 	toint (c: CHARACTER): INTEGER
+		require
+			check_char: c.is_alpha
 		do
 			inspect c
 			when 'A', 'a' then
@@ -343,16 +363,5 @@ feature
 				Result := -1
 			end
 		end
-
-		--	if value = 0 then Result:= 'A' end
-		--	if value = 1 then Result:= 'B' end
-		--	if value = 2 then Result:= 'C' end
-		--	if value = 3 then Result:= 'D' end
-		--	if value = 4 then Result:= 'E' end
-		--	if value = 5 then Result:= 'F' end
-		--	if value = 6 then Result:= 'G' end
-		--	if value = 7 then Result:= 'H' end
-		--	if value = 8 then Result:= 'I' end
-		--	if value = 9 then Result:= 'J' end
 
 end
