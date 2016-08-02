@@ -40,6 +40,10 @@ feature
 				exit
 			loop
 				x := 0
+				cmulti.refresh
+				csingleltd.refresh
+				csingleunl.refresh
+
 				--Displays welcome and mode selection screen
 				print ("%N------------------------------------------------------%N")
 				print ("%NWelcome to the Battleship Game!%N")

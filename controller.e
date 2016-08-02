@@ -45,6 +45,14 @@ feature
 		end
 	end
 
+	--Refreshes all controller variables for new game status
+	refresh
+	do
+		score1 := 0
+		score2 := 0
+		done := false
+	end
+
 	--Display player result consisting of their score and number of turns taken
 	--Takes player score and turn count as input
 	display_result (score: INTEGER; turn: INTEGER)

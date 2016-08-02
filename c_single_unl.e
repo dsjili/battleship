@@ -32,7 +32,6 @@ feature
 			valid: BOOLEAN
 		do
 			y := 'z' 		--Default y value
-			done := false	--Reset game exit condition
 
 			from
 			invariant
