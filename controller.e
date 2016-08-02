@@ -1,6 +1,6 @@
 note
 	description: "Summary description for {CONTROLLER}."
-	author: "David Iliaguiev, Li Yin, Ting Fai Cheung"
+	author: "David Iliaguiev, Li Yin, Tin Feng Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 
@@ -14,6 +14,36 @@ feature
 	score1: INTEGER	--Player score for single player and P1 multiplayer
 
 	score2: INTEGER	--Player score for P2 multiplayer
+
+	--This function checks user location input and returns true if the input is valid
+	--and false otherwise.
+	--Takes a character and integer as parameters
+	check_input(c: CHARACTER; i: INTEGER): BOOLEAN
+	do
+		Result := false
+
+		--Check if the character and integer are within desired range of values
+		--If not, notifiy the player that their input is invalid and ask them to try again
+		if
+			(c = 'a' OR c = 'A' OR
+			c = 'b' OR c = 'B' OR
+			c = 'c' OR c = 'C' OR
+			c = 'd' OR c = 'D' OR
+			c = 'e' OR c = 'E' OR
+			c = 'f' OR c = 'F' OR
+			c = 'g' OR c = 'G' OR
+			c = 'h' OR c = 'H' OR
+			c = 'i' OR c = 'I' OR
+			c = 'j' OR c = 'J' OR
+			c = 's' OR c = 'S')
+			AND
+			i >= 0 AND i <= 9
+		then
+			Result := true
+		else
+			print("Invalid Location! Please try again%N")
+		end
+	end
 
 	--Display player result consisting of their score and number of turns taken
 	--Takes player score and turn count as input
@@ -29,6 +59,10 @@ feature
 			print ("%NTurn: ")
 			print (turn)
 			print ("%N")
+		ensure
+			--Ensure that no changes have been made to score and turn when displaying result
+			score_unchanged: score = old score
+			turn_unchanged: turn = old turn
 		end
 
 invariant
