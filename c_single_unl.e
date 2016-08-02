@@ -1,6 +1,6 @@
 note
 	description: "Summary description for {C_SINGLE_UNL}."
-	author: "David Iliaguiev, Li Yin, Tin Feng Cheung"
+	author: "David Iliaguiev, Li Yin, Ting Fai Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 
