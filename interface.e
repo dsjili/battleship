@@ -39,6 +39,7 @@ feature
 			until
 				exit
 			loop
+				x := 0
 				--Displays welcome and mode selection screen
 				print ("%N------------------------------------------------------%N")
 				print ("%NWelcome to the Battleship Game!%N")

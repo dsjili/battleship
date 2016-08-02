@@ -32,8 +32,9 @@ feature
 			counter: INTEGER
 			valid: BOOLEAN
 		do
-			counter := 50 --Set initial remaining turns to 50
-			y := 'z' --Default y value
+			counter := 50 	--Set initial remaining turns to 50
+			y := 'z' 		--Default y value
+			done := false	--Reset game exit condition
 
 			from
 			invariant

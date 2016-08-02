@@ -33,7 +33,8 @@ feature
 			turn2: INTEGER
 			valid: BOOLEAN
 		do
-			y := 'z' --Default y value
+			y := 'z' 		--Default y value
+			done := false	--Reset game exit condition
 
 			from
 			invariant
