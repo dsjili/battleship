@@ -39,9 +39,9 @@ feature
 				--Create gameboards and control modules
 			create gameboard1.make
 			create gameboard2.make
-			create cmulti
-			create csingleltd
-			create csingleunl
+			create cmulti.make
+			create csingleltd.make
+			create csingleunl.make
 			create start
 
 			from

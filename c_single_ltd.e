@@ -11,6 +11,9 @@ inherit
 
 	CONTROLLER --C_SINGLE_LTD inherits from CONTROLLER class
 
+create
+	make
+
 feature
 
 		--Single player interaction for battleship game with limited turns
@@ -25,7 +28,6 @@ feature
 		local
 				--Local variables for X and Y matrix coordinates,
 				--player output after each attack, player turn, and remaining turns
-			attack: ATTACK_VIEW
 			x: INTEGER
 			y: CHARACTER
 			output: STRING
@@ -33,7 +35,6 @@ feature
 			counter: INTEGER
 			valid: BOOLEAN
 		do
-			create attack
 			counter := 50 --Set initial remaining turns to 50
 			y := 'z' --Default y value
 

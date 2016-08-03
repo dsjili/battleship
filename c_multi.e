@@ -11,6 +11,10 @@ inherit
 
 	CONTROLLER --C_MULTI inherits from CONTROLLER class
 
+
+create
+	make
+
 feature
 
 		--Multiplayer interaction for Battleship game
@@ -25,7 +29,6 @@ feature
 		local
 				--Local variables for X and Y matrix coordinates,
 				--player outputs after each attack, and player turns
-			attack: ATTACK_VIEW
 			x: INTEGER
 			y: CHARACTER
 			output1: STRING
@@ -34,7 +37,6 @@ feature
 			turn2: INTEGER
 			valid: BOOLEAN
 		do
-			create attack
 			y := 'z' --Default y value
 
 			from
@@ -91,7 +93,7 @@ feature
 						g1.display_solution
 						done := true
 					else
-						
+
 						if output1.is_equal("You have already targeted this cell!") then
 						else
 							--Increment P1 turn
@@ -154,7 +156,7 @@ feature
 								g1.display_solution
 								done := true
 							else
-								
+
 								if output2.is_equal("You have already targeted this cell!") then
 								else
 									--Increment P2 turn

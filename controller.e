@@ -9,11 +9,18 @@ deferred class
 
 feature
 
+	attack: ATTACK_VIEW
+
 	done: BOOLEAN	--Boolean variable to determine status of the game
 
 	score1: INTEGER	--Player score for single player and P1 multiplayer
 
 	score2: INTEGER	--Player score for P2 multiplayer
+
+	make
+	do
+		create attack
+	end
 
 	--This function checks user location input and returns true if the input is valid
 	--and false otherwise.

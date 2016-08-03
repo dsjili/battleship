@@ -11,6 +11,9 @@ inherit
 
 	CONTROLLER --C_SINGLE_UNL inherits from CONTROLLER class
 
+create
+	make
+
 feature
 
 		--Single player interaction for battleship game with unlimited turns
@@ -25,14 +28,12 @@ feature
 		local
 				--Local variables for X and Y matrix coordinates,
 				--player output after each attack, and player turn
-			attack: ATTACK_VIEW
 			x: INTEGER
 			y: CHARACTER
 			output: STRING
 			turn: INTEGER
 			valid: BOOLEAN
 		do
-			create attack
 			y := 'z' --Default y value
 
 			from
