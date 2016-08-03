@@ -31,9 +31,13 @@ feature
 		end
 
 	get_char:CHARACTER
+		local
+			s: STRING
 		do
-			io.read_character
-			Result := io.last_character
+			io.read_line
+			s:= io.last_string
+			print(s.item (1))
+			Result := s.item (1)
 		ensure
 			result_not_void:	Result /= VOID
 			--	result_is_alpha:	Result.is_alpha
@@ -41,12 +45,42 @@ feature
 		end
 
 	get_int:INTEGER
+		local
+			s: STRING
 		do
-			io.read_integer
-			Result := io.last_integer
+			s := io.last_string
+			Result:= convert_int(s.item (2))
 		ensure
 			result_not_void:	Result /= VOID
 			--	result_range:	Result >= 0 and Result <= 9
 			--	This ^ is checked by controller on return
 		end
+
+	convert_int(c:CHARACTER):INTEGER
+	do
+		inspect c
+			when '0' then
+				Result := 0
+			when '1' then
+				Result := 1
+			when '2' then
+				Result := 2
+			when '3' then
+				Result := 3
+			when '4' then
+				Result := 4
+			when '5' then
+				Result := 5
+			when '6' then
+				Result := 6
+			when '7' then
+				Result := 7
+			when '8' then
+				Result := 8
+			when '9' then
+				Result := 9
+			else
+				Result := -1
+			end
+	end
 end

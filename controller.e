@@ -43,9 +43,6 @@ feature
 		else
 			print("Invalid Location! Please try again%N")
 		end
-	ensure
-		--Ensure that result is not void
-		result_check: Result /= void
 	end
 
 	--Refreshes all controller variables for new game status
@@ -60,9 +57,9 @@ feature
 	--Takes player score and turn count as input
 	display_result (score: INTEGER; turn: INTEGER)
 		require
-			--Requires that the input parameters are not void and >= 0
-			score_check: score /= void and score >= 0
-			turn_check:	turn /= void and turn >= 0
+			--Requires that the input parameters are not void
+			score_check: score /= void
+			turn_check:	turn /= void
 		do
 			--Print approriate results
 			print ("%NScore: ")
@@ -74,9 +71,6 @@ feature
 			--Ensure that no changes have been made to score and turn when displaying result
 			score_unchanged: score = old score
 			turn_unchanged: turn = old turn
-			--Requires that the input parameters are not void and >= 0
-			score_check: score /= void and score >= 0
-			turn_check:	turn /= void and turn >= 0
 		end
 
 invariant

@@ -66,8 +66,11 @@ feature
 
 						--Read and store player x coordinate input information
 					x := attack.get_int
+
 					valid := check_input (y, x)
 				end
+
+				print("%N")
 
 					--If user input is 's', forfeit current game and display current game results
 				if y = 's' OR y = 'S' then
@@ -118,9 +121,6 @@ feature
 						print ("%N")
 					end
 				end
-			end
-			if done OR counter = 0 then
-				print("GAME OVER! GG n00b! %N")
 			end
 		ensure
 				--Ensure that done is true or counter is 0 if game exits
