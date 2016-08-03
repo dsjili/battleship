@@ -91,7 +91,9 @@ feature
 						g1.display_solution
 						done := true
 					else
-
+						
+						if output1.is_equal("You have already targeted this cell!") then
+						else
 							--Increment P1 turn
 						turn1 := turn1 + 1
 						print ("%N")
@@ -103,7 +105,7 @@ feature
 						elseif score1 > 0 then
 							score1 := score1 - 1
 						end
-
+						end
 							--Display P1 results
 						print ("P1 Results: %N")
 						print (output1)
@@ -152,7 +154,9 @@ feature
 								g1.display_solution
 								done := true
 							else
-
+								
+								if output2.is_equal("You have already targeted this cell!") then
+								else
 									--Increment P2 turn
 								turn2 := turn2 + 1
 								print ("%N")
@@ -164,7 +168,7 @@ feature
 								elseif score2 > 0 then
 									score2 := score2 - 1
 								end
-
+								end
 									--Display P2 results
 								print ("P2 Results: %N")
 								print (output2)
