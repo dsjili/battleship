@@ -9,6 +9,7 @@ class
 
 feature
 
+	--This function reads an input selection from the user for the welcome menu
 	get_start:INTEGER
 		do
 			io.read_integer
@@ -19,6 +20,7 @@ feature
 			--	This ^ should be ensured but is error checked in C_INTERFACE
 		end
 
+	--Display welcome information for every new game
 	display_welcome
 		do
 			print ("%N------------------------------------------------------%N")
@@ -31,6 +33,7 @@ feature
 			print ("Press 5 to exit%N")
 		end
 
+	--Displays game instruction
 	display_instructions
 		do
 			print ("The First Time You Play:%N")

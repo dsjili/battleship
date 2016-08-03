@@ -67,6 +67,7 @@ feature
 						--Read and store player x coordinate input information
 					x := attack.get_int
 
+						--Checks that input is valid
 					valid := check_input (y, x)
 				end
 

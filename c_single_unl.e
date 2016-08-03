@@ -60,6 +60,8 @@ feature
 					y := attack.get_char
 						--Read and store player x coordinate input information
 					x := attack.get_int
+
+						--Checks that input is valid
 					valid := check_input (y, x)
 				end
 
@@ -80,8 +82,7 @@ feature
 						g.display
 						done := true
 					else
-						if output.is_equal("You have already targeted this cell!") then
-						else
+
 							--Increment player turn
 						turn := turn + 1
 						print ("%N")
@@ -93,7 +94,7 @@ feature
 						elseif score1 > 0 then
 							score1 := score1 - 1
 						end
-						end
+
 							--Display player results
 						print (output)
 						display_result (score1, turn)
