@@ -43,6 +43,9 @@ feature
 		else
 			print("Invalid Location! Please try again%N")
 		end
+	ensure
+		--Ensure that result is not void
+		result_check: Result /= void
 	end
 
 	--Refreshes all controller variables for new game status
