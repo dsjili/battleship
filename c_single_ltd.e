@@ -119,6 +119,9 @@ feature
 					end
 				end
 			end
+			if done OR counter = 0 then
+				print("GAME OVER! GG n00b! %N")
+			end
 		ensure
 				--Ensure that done is true or counter is 0 if game exits
 				--done_check: done = true OR  counter = 0
