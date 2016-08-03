@@ -33,7 +33,7 @@ feature
 			turn2: INTEGER
 			valid: BOOLEAN
 		do
-			y := 'z' 		--Default y value
+			y := 'z' --Default y value
 
 			from
 			invariant
@@ -52,7 +52,7 @@ feature
 				print ("P1: Please enter a letter from A-J followed by a number from 0-9 and the ENTER key:%N")
 				print ("(Type S followed by any number and the ENTER key to forfeit current game)%N")
 
-				--Loop will check if the user input is valid and within desired range of values
+					--Loop will check if the user input is valid and within desired range of values
 				from
 					valid := false
 				until
@@ -87,12 +87,15 @@ feature
 					print ("%N")
 
 						--If attack is successful, increase P1 score
+						--If unsuccessful, deduct 1 from score
 					if output1.is_equal ("Hit!") then
-						score1 := score1 + 1
+						score1 := score1 + 10
+					elseif score1 > 0 then
+						score1 := score1 - 1
 					end
 
 						--Display P1 results
-					print("P1 Results: %N")
+					print ("P1 Results: %N")
 					print (output1)
 					display_result (score1, turn1)
 					g2.display
@@ -136,12 +139,15 @@ feature
 						print ("%N")
 
 							--If attack is successful, increase P2 score
+							--If unsuccessful, deduct 1 from score
 						if output2.is_equal ("Hit!") then
-							score2 := score2 + 1
+							score2 := score2 + 10
+						elseif score2 > 0 then
+							score2 := score2 - 1
 						end
 
 							--Display P2 results
-						print("P2 Results: %N")
+						print ("P2 Results: %N")
 						print (output2)
 						display_result (score2, turn2)
 						g1.display

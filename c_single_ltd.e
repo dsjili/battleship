@@ -32,8 +32,8 @@ feature
 			counter: INTEGER
 			valid: BOOLEAN
 		do
-			counter := 50 	--Set initial remaining turns to 50
-			y := 'z' 		--Default y value
+			counter := 50 --Set initial remaining turns to 50
+			y := 'z' --Default y value
 
 			from
 			invariant
@@ -55,7 +55,7 @@ feature
 				print ("Please enter a letter from A-J followed by a number from 0-9 and the ENTER key:%N")
 				print ("(Type S followed by any number and the ENTER key to forfeit current game)%N")
 
-				--Loop will check if the user input is valid and within desired range of values
+					--Loop will check if the user input is valid and within desired range of values
 				from
 					valid := false
 				until
@@ -88,10 +88,15 @@ feature
 					turn := turn + 1
 					print ("%N")
 
-						--If attack is successful, increase player score
+						--Decrement turn remaining
 					counter := counter - 1
+
+						--If attack is successful, increase player score
+						--If unsuccessful, deduct 1 from score
 					if output.is_equal ("Hit!") then
-						score1 := score1 + 1
+						score1 := score1 + 10
+					elseif score1 > 0 then
+						score1 := score1 - 1
 					end
 
 						--Display player results

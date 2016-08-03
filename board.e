@@ -126,6 +126,9 @@ feature
 				print ("%N")
 				i := i + 1
 			end
+		ensure
+			--ensure_display: ensure that the right result is printed to the board
+			--				  and that no occupied cell is printed.
 		end
 
 	--This function displays the contents of the board with the ship locations revealed
@@ -152,6 +155,8 @@ feature
 				print ("%N")
 				i := i + 1
 			end
+		ensure
+			--ensure_display: ensure that all cells of the board are displayed correctly
 		end
 
 	--This function returns a random integer from the random sequence and
@@ -198,6 +203,8 @@ feature
 				--Note: if selected cell does not pass the two checks above, it will
 				--regenerate a new random cell without incrementing the current index
 			end
+		ensure
+			--ensure_random: ensure board has been randomized and all ships are drawn to board
 		end
 
 	--This function draws ships based on the size of the ship, as specified by the function parameter
@@ -411,6 +418,10 @@ feature
 	--This function performs the attack command on the corresponding board
 	--X and Y 'raw' coordinate values taken as input
 	attack (c1: INTEGER; c2: CHARACTER): STRING
+		require
+			--Parameter checks to ensure they are valid
+			check_c1: c1 >= 2 and c1 <= 11
+			check_c2: c2.is_alpha
 		local
 			x, y: INTEGER	--Local variables representing X and Y coordinate values
 		do
