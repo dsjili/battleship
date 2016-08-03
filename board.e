@@ -484,6 +484,8 @@ feature
 		ensure
 			--Ensure that result is not void
 			result_check: Result /= void
+			--Ensure result is in range
+			range_check: Result >= 2 and Result <= 11
 		end
 
 end
