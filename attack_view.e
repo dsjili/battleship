@@ -54,10 +54,12 @@ feature
 		do
 			s := io.last_string
 
-			if s.count > 1 then
+			if s.count = 2 then
 				Result:= convert_int(s.item (2))
+			elseif s.item (1) = 's' OR s.item (1) = 'S' then
+				Result := 0
 			else
-				Result:= 0
+				Result:= -1
 			end
 
 		ensure
