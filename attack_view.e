@@ -36,7 +36,6 @@ feature
 		do
 			io.read_line
 			s:= io.last_string
-			print(s.item (1))
 			Result := s.item (1)
 		ensure
 			result_not_void:	Result /= VOID
@@ -49,7 +48,12 @@ feature
 			s: STRING
 		do
 			s := io.last_string
-			Result:= convert_int(s.item (2))
+			if s.count > 1 then
+				Result:= convert_int(s.item (2))
+			else
+				Result:= 0
+			end
+
 		ensure
 			result_not_void:	Result /= VOID
 			--	result_range:	Result >= 0 and Result <= 9
