@@ -96,6 +96,35 @@ feature
 			random_char
 		end
 
+	--This functions checks whether player has cleared the game or not
+	check_clear: BOOLEAN
+	local
+			i, j: INTEGER	--Local loop counters
+		do
+			Result:= true
+			--Two-level loop ensures all cells are checked
+			from
+				i := 1
+			until
+				i > 11
+			loop
+				from
+					j := 1
+				until
+					j > 11
+				loop
+
+					--Checks if board at current cell is occupied, if so,
+					--
+					if board.item (i, j) = Occupied then
+						Result:= false
+					end
+					j := j + 1
+				end
+				i := i + 1
+			end
+		end
+
 	--This function displays the contents of the board for players with the ships hidden
 	display
 		local
@@ -488,4 +517,8 @@ feature
 			range_check: Result >= 2 and Result <= 11
 		end
 
+invariant
+	--Ensure that board contents are consistent with the types of characters allowed
+	--check_items: For all items on the board,
+	--			   item = 'X' OR item = '*' OR item = '#' OR item = ' '
 end

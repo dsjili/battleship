@@ -53,7 +53,7 @@ feature
 				done OR counter = 0
 			loop
 					--Display player attack prompt
-					attack.display_attack
+				attack.display_attack
 
 					--Loop will check if the user input is valid and within desired range of values
 				from
@@ -82,34 +82,46 @@ feature
 						--Send input information to attack function and store results
 					output := g.attack (x + 2, y)
 
-						--Increment P1 turn
-					turn := turn + 1
-					print ("%N")
+						--Checks if user has successfully beaten the game after each attack seqeuence
+					if g.check_clear then
+						print ("Congratulations! You have beaten the game!%N")
+						display_result (score1, turn)
+						print ("Turns Remaining: ")
+						print (counter)
+						print ("%N")
+						g.display
+						done := true
+					else
 
-						--Decrement turn remaining
-					counter := counter - 1
+							--Increment P1 turn
+						turn := turn + 1
+						print ("%N")
 
-						--If attack is successful, increase player score
-						--If unsuccessful, deduct 1 from score
-					if output.is_equal ("Hit!") then
-						score1 := score1 + 10
-					elseif score1 > 0 then
-						score1 := score1 - 1
+							--Decrement turn remaining
+						counter := counter - 1
+
+							--If attack is successful, increase player score
+							--If unsuccessful, deduct 1 from score
+						if output.is_equal ("Hit!") then
+							score1 := score1 + 10
+						elseif score1 > 0 then
+							score1 := score1 - 1
+						end
+
+							--Display player results
+						print (output)
+						display_result (score1, turn)
+						print ("Turns Remaining: ")
+						print (counter)
+						print ("%N")
+						g.display
+						print ("%N")
 					end
-
-						--Display player results
-					print (output)
-					display_result (score1, turn)
-					print ("Turns Remaining: ")
-					print (counter)
-					print ("%N")
-					g.display
-					print ("%N")
 				end
 			end
 		ensure
-				--Ensure that done is true if game exits
-			done_check: done = true
+				--Ensure that done is true or counter is 0 if game exits
+				--done_check: done = true OR  counter = 0
 		end
 
 end

@@ -73,23 +73,32 @@ feature
 						--Send input information to attack function and store results
 					output := g.attack (x + 2, y)
 
-						--Increment player turn
-					turn := turn + 1
-					print ("%N")
+						--Checks if user has successfully beaten the game after each attack seqeuence
+					if g.check_clear then
+						print ("Congratulations! You have beaten the game!%N")
+						display_result (score1, turn)
+						g.display
+						done := true
+					else
 
-						--If attack is successful, increase player score
-						--If unsuccessful, deduct 1 from score
-					if output.is_equal ("Hit!") then
-						score1 := score1 + 10
-					elseif score1 > 0 then
-						score1 := score1 - 1
+							--Increment player turn
+						turn := turn + 1
+						print ("%N")
+
+							--If attack is successful, increase player score
+							--If unsuccessful, deduct 1 from score
+						if output.is_equal ("Hit!") then
+							score1 := score1 + 10
+						elseif score1 > 0 then
+							score1 := score1 - 1
+						end
+
+							--Display player results
+						print (output)
+						display_result (score1, turn)
+						g.display
+						print ("%N")
 					end
-
-						--Display player results
-					print (output)
-					display_result (score1, turn)
-					g.display
-					print ("%N")
 				end
 			end
 		ensure
