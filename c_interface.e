@@ -1,7 +1,7 @@
 note
 	description: "Main controller class for Battleship game and responsible for game creation (SINGLETON)"
 	author: "Li Yin, 211608973, yinl1"
-	coauthors: "David Iliaguiev, Ting Feng Cheung"
+	coauthor: "David Iliaguiev, Li Yin, Ting Fai Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 
