@@ -1,6 +1,7 @@
 note
-	description: "Summary description for {INTERFACE_ACCESSOR}."
-	author: ""
+	description: "Singleton accessor class for INTERFACE"
+	author: "Li Yin, 211608973, yinl1"
+	coauthors: "David Iliaguiev, Ting Feng Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 

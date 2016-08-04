@@ -1,6 +1,7 @@
 note
-	description: "Summary description for {NEW_INTERFACE}."
-	author: ""
+	description: "Instance accessor class for INTERFACE"
+	author: "Li Yin, 211608973, yinl1"
+	coauthors: "David Iliaguiev, Ting Feng Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 
@@ -14,7 +15,7 @@ inherit
 feature
 
 	--Creates only one instance of C_INTERFACE
-	the_interface: C_INTERFACE
+	the_interface: INTERFACE_SINGLETON
 	once
 		create Result.make
 	end

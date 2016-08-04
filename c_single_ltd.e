@@ -1,6 +1,7 @@
 note
-	description: "Summary description for {C_SINGLE_LTD}."
-	author: "David Iliaguiev, Li Yin, Ting Fai Cheung"
+	description: "Controller for single player limited turn game mode"
+	author: "Li Yin, 211608973, yinl1"
+	coauthors: "David Iliaguiev, Ting Feng Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 

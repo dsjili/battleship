@@ -1,6 +1,7 @@
 note
-	description: "Summary description for {C_INSTRUCT}."
-	author: ""
+	description: "View class consisting of welcome screen"
+	author: "Li Yin, 211608973, yinl1"
+	coauthors: "David Iliaguiev, Ting Feng Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 
