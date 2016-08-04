@@ -15,13 +15,13 @@ create
 
 feature {NONE} -- Initialization
 
-	interface: C_INTERFACE
+	interface: NEW_INTERFACE
 
 	make
 			-- Run application.
 		do
 			--| Add your code here
-			create interface.make
+			create interface
 
 		end
 

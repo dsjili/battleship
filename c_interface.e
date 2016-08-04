@@ -12,6 +12,12 @@ create
 
 feature
 
+	--Unique instance of C_INTERFACE class
+	frozen the_interface: C_INTERFACE
+	once
+		Result:= current
+	end
+
 		--gameboards for single and multiplayer modes
 
 	gameboard1: BOARD
@@ -39,6 +45,8 @@ feature
 				--Create gameboards and control modules
 			create gameboard1.make
 			create gameboard2.make
+
+
 			create cmulti.make
 			create csingleltd.make
 			create csingleunl.make
@@ -95,6 +103,9 @@ invariant
 		--Class invariants to ensure that gameboards and control modules are not void
 	board_not_null: gameboard1 /= VOID and gameboard2 /= VOID
 	controllers_not_null: cmulti /= VOID and csingleltd /= VOID and csingleunl /= VOID
-	not_exit: -- exit = false implies the game is still being played
+	--not_exit: exit = false implies the game is still being played
+
+	--Ensure singleton status is preserved
+	only_one_instance: Current = the_interface
 
 end
