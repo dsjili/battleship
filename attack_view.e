@@ -1,7 +1,7 @@
 note
 	description: "Prompts user for input and translates input into X and Y matrix coordinates."
 	author: "Li Yin, 211608973, yinl1"
-	coauthors: "David Iliaguiev, Ting Feng Cheung"
+	coauthor: "David Iliaguiev, Li Yin, Ting Fai Cheung"
 	date: "$Date$"
 	revision: "$Revision$"
 
