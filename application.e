@@ -1,6 +1,6 @@
 note
 	description : "Battleship application root class"
-	author: "David Iliaguiev, Li Yin, Tin Feng Cheung"
+	author: "David Iliaguiev, Li Yin, Ting Fai Cheung"
 	date        : "$Date$"
 	revision    : "$Revision$"
 
